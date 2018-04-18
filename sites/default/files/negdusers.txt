@@ -1,0 +1,23 @@
+manojbhagat / manojbhagat  ------------ Programme Management / career / Get Connected   ------------ manojbhagat@negd.com
+tusharrai / tusharrai ---------------- Projects & Programmes ---------------- tusharrai@negd.com
+akilur_rehman/ akilur_rehman -------------- Projects & Programmes ------------------ akilur_rehman@negd.com
+vashima_shubha / vashima_shubha ------------ Awareness & Communication -------------- vashima_shubha@negd.com
+barnali_mukherjee / barnali_mukherjee ---------------- Awareness & Communication  --------------------- barnali_mukherjee@negd.com
+ajeet_kumar / ajeet_kumar ---------------------- Impact & Outcome ----------------- ajeet_kumar@negd.com
+rkverma / rkverma -------------------  Citizen Corner -----------           rkverma@negd.gov.in
+content_owner / content_owner ------------------ Activity Calender / digital repository / Gallery  ------------- content_owner@negd.gov.in
+ishannegd / ishannegd --------------- Blogs / Quiz/ Activity Calender ------------------- ishannegd@negd.gov.in
+deepinder_singh / deepinder_singh -------------- Discussion Forum ---------- deepinder_singh@negd.gov.in
+gajraj_sharma / gajraj_sharma -------------- Tender Notice -------------- gajraj_sharma@negd.gov.in
+
+926948972066
+
+http://100.100.7.3:8080/digitalindia/myrestapi/user/update/password_reset
+name : newuser
+firstname : Test Test
+mobilenumber : 9717721963
+
+
+http://203.110.84.87/digitalindia/myrestapi/user/mvalidate/password_reset
+name : testuser
+smscode :ghghghs2

@@ -1,0 +1,1 @@
+window.CKEDITOR_BASEPATH = '/rajghat/sites/all/libraries/ckeditor/';

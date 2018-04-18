@@ -1,0 +1,101 @@
+<?php
+ 
+function other_form_alter(&$form, &$form_state, $form_id) {
+	$url = $_GET ['q'];
+	Global $user;
+	
+	 // print $form_id;
+	
+	 $form['#attributes']['autocomplete'] = 'off';
+ 
+	   if (strpos($form_id, '_node_form') !== FALSE) {
+	    
+	   $form['#validate'][] = 'all_nodes_check';
+	    
+		if($form_id == 'tender_and_quotes_node_form')
+		{
+		 $form['#validate'][] = 'all_date_check';
+		}
+		if($form_id == 'footer_logos_node_form')
+		{
+		 $form['#validate'][] = 'all_logos_check';
+		}
+		if($form_id == 'related_links_node_form')
+		{
+		 $form['#validate'][] = 'all_related_check';
+		}
+		
+		
+		
+     }
+	 
+	 
+	 
+	 
+			 
+				 
+  }
+
+function all_nodes_check($form, &$form_state)
+{
+ 
+   $qstring = $form_state ['values'] ['title'];
+
+	 if (preg_match('/[\'^£$%*@!#^~><>|=+¬]/', $qstring))
+	{
+		  form_set_error('title', t('Please enter the valid Title'));
+		  	
+	}
+ 
+}
+
+function all_date_check($form, &$form_state)
+{
+ 
+	$qstring1 = $form_state['values']['field_start_date']['und'][0]['value'];
+
+	$timestamp1 = strtotime($qstring1);
+
+	$qstring2 = $form_state['values']['field_interview_date']['und'][0]['value'];
+	$timestamp2 = strtotime($qstring2);
+ 
+	 if ($timestamp2 < $timestamp1)
+	{
+		  form_set_error('field_interview_date', t('Last Date of Application can not be less then publishing date.'));
+		  	
+	}
+ 
+}
+  
+  
+function all_logos_check($form, &$form_state)
+{
+   
+	$qstring1 = $form_state['values']['field_external_url']['und'][0]['title'];
+ 
+	if (preg_match('/[\'^£$%*@!#^~><>|=+¬]/', $qstring1))
+	{
+		  form_set_error('field_external_url', t('Please enter the valid Title'));
+		  	
+	}
+ 
+}
+
+
+
+
+function all_related_check($form, &$form_state)
+{
+   
+	$qstring1 = $form_state['values']['field_url_link']['und'][0]['value'];
+ 
+	if (preg_match('/[\'^£$%*@!#^~><>|=+¬]/', $qstring1))
+	{
+		  form_set_error('field_url_link', t('Please enter the valid URL'));
+		  	
+	}
+ 
+}
+
+  
+   

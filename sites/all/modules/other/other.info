@@ -1,0 +1,4 @@
+name = other 
+description = Module for some settings in RAJGHAT
+ 
+core = 7.x

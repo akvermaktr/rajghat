@@ -1,0 +1,81 @@
+I tested following apis and everything looking fine .
+
+Step 1:
+
+
+User Register Method : POST
+
+http://203.110.84.87/digitalindia/myrestapi/user/register
+
+name : anil900
+pass : anil#123
+mail : anil.kumar@yahoo.com 
+firstname : Test Test 
+mobilenumber : 9717721963
+devicename: android
+
+ 
+
+Step 2:
+When a user register a sms will be sent  and to verify sms use the below api
+ 
+SMS validation
+http://203.110.84.87/digitalindia/myrestapi/user/validatesms/password_reset
+uid : anil900
+smscode : 67f1wyd
+
+ 
+
+{"response":{"responsemessage":"Incorrect sms code.","responsecode":"0"}}
+{"response":{"responsemessage":"User Validated Successfully.","responsecode":"1"}}
+
+
+Step 3:
+To Resend SMS click below api
+
+
+Resend SMS when registring
+
+
+
+
+http://203.110.84.87/digitalindia/myrestapi/user/resendsms/password_reset
+uid : anil900
+
+
+{"response":{"responsemessage":"SMS code sent Successfully.","responsecode":"1"}}
+-------------------------------------------------------------------------------------------
+
+
+
+
+Update profile Mainly mobile number
+
+
+
+Step 1:
+When updating mobile number sms will be sent
+
+
+Update  profile Mobile sms validation 
+
+http://203.110.84.87/digitalindia/myrestapi/user/mvalidate/password_reset
+name : testuser
+smscode :ghghghs2
+
+
+
+Step 2:
+update profile sms validation (Please Note When updating profile SMS validation url is different then register)
+http://203.110.84.87/digitalindia/myrestapi/user/resendupdatesms/password_reset
+uid : anil900
+-------------------------------------------------------------------------------------------
+
+
+
+Step 3:
+http://203.110.84.87/digitalindia/myrestapi/user/update/password_reset
+
+name : newuser
+firstname : Test Test 
+mobilenumber : 9717721963

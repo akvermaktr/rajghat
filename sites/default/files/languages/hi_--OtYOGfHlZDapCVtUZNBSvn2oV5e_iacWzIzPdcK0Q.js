@@ -1,0 +1,1 @@
+Drupal.locale = { 'strings': {"":{"Home":"\u092e\u0941\u0916 \u092a\u0943\u0937\u094d\u0920"}} };
